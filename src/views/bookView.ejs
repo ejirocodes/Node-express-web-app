@@ -38,8 +38,10 @@
         <ul class="nav navbar-right navbar-nav">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
-            <ul class="dropdown-menu" style="padding:12px;">
-              <form class="form-inline">
+             
+                  <ul class="dropdown-menu" style="padding:12px;">
+                     <form class="form-inline">
+            
                 <button type="submit" class="btn btn-default pull-right"><i
                     class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left"
                   placeholder="Search">
@@ -91,10 +93,7 @@
                     <div class="panel">
                         <div class="panel-body">
 
-
-
                             <!--/stories-->
-                            <% for(let i = 0; i <books.length; i ++) {%>
                             <div class="row">
                                 <br>
                                 <div class="col-md-2 col-sm-3 text-center">
@@ -104,15 +103,13 @@
                                 </div>
                                 <div class="col-md-10 col-sm-9">
                                     <h3>
-                                        <%= books[i].title %>
+                                        <%= books .title %>
                                     </h3>
                                     <div class="row">
                                         <div class="col-xs-9">
                                             <h4><span class="label label-default"><%= books[i].author %></span></h4>
                                             <h4>
-                                                <small style="font-family:courier,'new courier';" class="text-muted">2
-                                                    hours ago • <a href="/books/<%=i + 1%>" class="text-muted">Read
-                                                        More</a></small>
+                                               
                                             </h4>
                                         </div>
                                         <div class="col-xs-3"></div>
@@ -121,7 +118,6 @@
                                 </div>
                             </div>
                             <hr>
-                            <%}%>
                             <!--/stories-->
 
 
@@ -169,6 +165,7 @@
                     <div class="col-sm-6">
                         <ul class="list-inline">
                             <li><i class="icon-facebook icon-2x"></i></li>
+
                             <li><i class="icon-twitter icon-2x"></i></li>
                             <li><i class="icon-google-plus icon-2x"></i></li>
                             <li><i class="icon-pinterest icon-2x"></i></li>
@@ -184,7 +181,6 @@
         </footer>
         <!-- script references -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
