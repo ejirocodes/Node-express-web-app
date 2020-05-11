@@ -20,7 +20,7 @@ app.set('view engine', 'ejs');
 const nav = [
   { link: '/book', title: 'Books' },
   {
-    link: '/authors', title: 'Authors',
+    link: '/author', title: 'Authors',
   },
 ];
 
