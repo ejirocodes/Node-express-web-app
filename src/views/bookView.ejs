@@ -7,12 +7,13 @@
     <title><%=title%></title>
     <meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
     <!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -103,13 +104,13 @@
                                 </div>
                                 <div class="col-md-10 col-sm-9">
                                     <h3>
-                                        <%= books .title %>
+                                        <%= book.title %>
                                     </h3>
                                     <div class="row">
                                         <div class="col-xs-9">
-                                            <h4><span class="label label-default"><%= books[i].author %></span></h4>
+                                            <h4><span class="label label-default"><%= book.author %></span></h4>
                                             <h4>
-                                               
+
                                             </h4>
                                         </div>
                                         <div class="col-xs-3"></div>
@@ -180,7 +181,7 @@
             </div>
         </footer>
         <!-- script references -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 </body>
 
 </html>

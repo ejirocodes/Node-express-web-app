@@ -2,8 +2,8 @@ const express = require('express');
 
 const bookRouter = express.Router();
 
-const books = [
-  {
+function router(nav) {
+  const books = [{
     title: 'Chronicles of Enigx',
     genre: 'Historical fiction',
     author: 'Ryan Scott',
@@ -33,35 +33,32 @@ const books = [
     author: 'Blake Scott',
     read: true,
   },
-];
-
-bookRouter.route('/')
-  .get((req, res) => {
-    res.render('bookListView', {
-      nav: [{ link: '/books', title: 'Books' },
+  ];
+  bookRouter.route('/')
+    .get((req, res) => {
+      res.render(
+        'bookListView',
         {
-          link:
-             '/authors',
-          title: 'Authors',
-        }],
-      title: 'Books',
-      books,
+          nav,
+          title: 'Library',
+          books,
+        },
+      );
     });
-  });
 
-bookRouter.route('/:id')
-  .get((req, res) => {
-    const { id } = req.params;
-    res.render('bookView', {
-      nav: [{ link: '/books', title: 'Books' },
+  bookRouter.route('/:id')
+    .get((req, res) => {
+      const { id } = req.params;
+      res.render(
+        'bookView',
         {
-          link:
-             '/authors',
-          title: 'Authors',
-        }],
-      title: 'Books',
-      books: books[id],
+          nav,
+          title: 'Library',
+          book: books[id],
+        },
+      );
     });
-  });
+  return bookRouter;
+}
 
-module.exports = bookRouter;
+module.exports = router;
