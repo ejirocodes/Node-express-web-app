@@ -46,7 +46,7 @@ function router(nav) {
         let client;
         try {
           client = await MongoClient.connect(url);
-          debug('Connected correctly to the server');
+          debug('Connected correctly to server');
 
           const db = client.db(dbName);
 
